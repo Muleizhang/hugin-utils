@@ -4,6 +4,26 @@ Command-line tools for reviewing and repairing visible seams in [Hugin](https://
 
 The tool helps find and review overlap problems; it does not claim that a difference score proves a bad seam or that a mask will fix all parallax.
 
+## Example: Murmansk panorama
+
+![Finished Murmansk panorama after seam repair](example/final-panorama.webp)
+
+The finished panorama was reviewed at full resolution and locally repaired with `hugin-utils splice`. The three images below total less than 700 KB.
+
+### Distant shoreline
+
+![Four versions of the distant shoreline: Lightroom Classic, original Hugin, partial repair, and final hugin-utils result](example/distant-shore.webp)
+
+The Lightroom Classic version used only its panorama feature, without color grading. It has a small step in the far shoreline. The panels show the same landmark across four versions; their projections and exposure differ.
+
+### Foreground shoreline
+
+![Four versions of the foreground shoreline: Lightroom Classic, original Hugin, partial repair, and final hugin-utils result](example/foreground-shore.webp)
+
+The original Hugin render shows a displaced coastline. An intermediate repair still leaves a duplicate edge; the final reviewed result follows one continuous shore. The full panorama and crops are in [`example/`](example/).
+
+Example photographs © 2026 Mulei Zhang. The MIT license covers the software, not these photographs.
+
 ## Requirements
 
 - Go 1.22 or newer to build
